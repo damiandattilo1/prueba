@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1588000514 source:c:\users\edattilo\documents\damian utn\programacion 2020\tp 1 previo\estructurasexplicacionclase\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1589055176 source:c:\users\damia\documents\damian\programacion utn\programacion 1\estructurasexplicacionclase\main.c
+	<stdio.h>
+	<stdlib.h>
+	"dataWarehouse.h"
+	"empleado.h"
+	<string.h>
+
+1588879382 c:\users\damia\documents\damian\programacion utn\programacion 1\estructurasexplicacionclase\datawarehouse.h
+
+1588707041 c:\users\damia\documents\damian\programacion utn\programacion 1\estructurasexplicacionclase\empleado.h
+
