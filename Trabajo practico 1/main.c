@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include "funciones.h"
 
-// BORRAR
+// BORRAR NUEVO
 
 int main()
 {
