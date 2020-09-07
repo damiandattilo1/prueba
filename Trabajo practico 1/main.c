@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include "funciones.h"
 
+// BORRAR
+
 int main()
 {
     float numeroA;
