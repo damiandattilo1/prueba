@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1602679473 source:c:\users\damia\documents\damian\programacion utn\primer parcial laboratorio 1 dattilo, damian\bicicletas.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"dataStore.h"
+	<string.h>
+	"bicicletas.h"
+
+1602679632 c:\users\damia\documents\damian\programacion utn\primer parcial laboratorio 1 dattilo, damian\datastore.h
+
+1602679361 c:\users\damia\documents\damian\programacion utn\primer parcial laboratorio 1 dattilo, damian\bicicletas.h
+
+1602678575 source:c:\users\damia\documents\damian\programacion utn\primer parcial laboratorio 1 dattilo, damian\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"bicicletas.h"
+	"trabajos.h"
+
+1602678962 c:\users\damia\documents\damian\programacion utn\primer parcial laboratorio 1 dattilo, damian\trabajos.h
+
+1602678905 source:c:\users\damia\documents\damian\programacion utn\primer parcial laboratorio 1 dattilo, damian\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"trabajos.h"
+	"bicicletas.h"
+
