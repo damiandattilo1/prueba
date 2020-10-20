@@ -7,6 +7,7 @@
 #include "trabajos.h"
 #include "validaciones.h"
 // 1ER PARCIAL 2 CUATRIMESTRE
+// NUEVO
 #define TAM 1000
 #define TAMCOL 5
 #define TAMTIPO 4
