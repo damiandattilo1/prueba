@@ -4,6 +4,7 @@
 #include "dataStore.h"
 #include <string.h>
 #include "bicicletas.h"
+#include "validaciones.h"
 
 int inicializarBicis(eBici bicis[], int tam)
 {
@@ -20,7 +21,7 @@ int inicializarBicis(eBici bicis[], int tam)
     return error;
 }
 
-int altaBici(eBici bicis[], int tam, int id)
+int altaBici(eBici bicis[], int tam, int id, eTipo tipos[], int tamTipo, eColor colores[], int tamCol)
 {
     int error=1;
     eBici nuevaBici;//auxiliar para cargar una nueva persona
@@ -37,16 +38,32 @@ int altaBici(eBici bicis[], int tam, int id)
         {
             nuevaBici.id = id;
 
-
+            system("cls");
             printf("Ingrese marca: ");
             fflush(stdin);
             gets(nuevaBici.marca);
 
-            printf("Ingrese id tipo: ");
+            system("cls");
+            mostrarTipos(tipos, tamTipo);
+            printf("\nIngrese id tipo: ");
             scanf("%d", &nuevaBici.idTipo);
+            while(validarTipo(nuevaBici.idTipo)==1)
+            {
+                printf("\nERROR, no es un tipo valido\n\n");
+                printf("Ingrese id tipo: ");
+                scanf("%d", &nuevaBici.idTipo);
+            }
 
-            printf("Ingrese idColor: ");
+            system("cls");
+            mostrarColores(colores, tamCol);
+            printf("\nIngrese idColor: ");
             scanf("%d", &nuevaBici.idColor);
+            while(validarColor(nuevaBici.idColor)==1)
+            {
+                printf("\nERROR, no es un color valido\n\n");
+                printf("Ingrese id color: ");
+                scanf("%d", &nuevaBici.idColor);
+            }
 
             printf("Ingrese rodado: ");
             scanf("%f", &nuevaBici.rodado);
@@ -64,7 +81,7 @@ int altaBici(eBici bicis[], int tam, int id)
     return error;
 }
 
-int modificarBici(eBici bicis[], int tam)
+int modificarBici(eBici bicis[], int tam, eTipo tipos[], int tamTipo, eColor colores[], int tamCol)
 {
     int error=1;
     int indice;
@@ -76,7 +93,7 @@ int modificarBici(eBici bicis[], int tam)
     {
         system("cls");
         printf("Modificar Bici\n\n");
-        mostrarBicis(bicis, tam);//Funcion MostrarPersonas para ver los numeros de legajo
+        mostrarBicis(bicis, tam, tipos, tamTipo, colores, tamCol);//Funcion MostrarPersonas para ver los numeros de legajo
         printf("Ingrese id: ");
         scanf("%d", &id);
 
@@ -88,6 +105,9 @@ int modificarBici(eBici bicis[], int tam)
         }
         else
         {
+            printf("\n");
+            mostrarBici(bicis[indice], tipos, tamTipo, colores, tamCol);
+
             printf("\nA Tipo\n");
             printf("b Rodado\n\n");
 
@@ -101,6 +121,12 @@ int modificarBici(eBici bicis[], int tam)
                 printf("Ingrese nuevo id tipo: ");
                 fflush(stdin);
                 scanf("%d", &bicis[indice].idTipo);
+                while(validarTipo(bicis[indice].idTipo)==1)
+                {
+                    printf("\nERROR, no es un tipo valido\n\n");
+                    printf("Ingrese id tipo: ");
+                    scanf("%d", &bicis[indice].idTipo);
+                }
                 break;
 
             case 'b':
@@ -125,7 +151,7 @@ int modificarBici(eBici bicis[], int tam)
     return error;
 }
 
-int bajaBici(eBici bicis[], int tam)
+int bajaBici(eBici bicis[], int tam, eTipo tipos[], int tamTipo, eColor colores[], int tamCol)
 {
     int error=1;
     int indice;
@@ -136,7 +162,7 @@ int bajaBici(eBici bicis[], int tam)
     {
         system("cls");
         printf("Baja de bicicletas\n\n");
-        mostrarBicis(bicis, tam);//Funcion MostrarPersonas para ver los numeros de legajo
+        mostrarBicis(bicis, tam, tipos, tamTipo, colores, tamCol);//Funcion MostrarPersonas para ver los numeros de legajo
         printf("Ingrese Id: ");
         scanf("%d", &id);
 
@@ -148,8 +174,10 @@ int bajaBici(eBici bicis[], int tam)
         }
         else
         {
-            mostrarBici(bicis[indice]);
-            printf("Confirma eliminar esta bici?: ");
+            printf("\n");
+            mostrarBici(bicis[indice], tipos, tamTipo, colores, tamCol);
+
+            printf("\nConfirma eliminar esta bici?: ");
             fflush(stdin);
             scanf("%c", &confirma);
             if(confirma=='s')
@@ -167,20 +195,20 @@ int bajaBici(eBici bicis[], int tam)
 }
 
 
-int mostrarBicis(eBici bicis[], int tam)
+int mostrarBicis(eBici bicis[], int tam, eTipo tipos[], int tamTipo, eColor colores[], int tamCol)
 {
     int error=1;//comienza con un error hasta que la funcion dia lo contrario
     int flag=0;
 
     if(bicis!= NULL && tam > 0)//verifica que el primer dato sea un vector y el segundo el tamaño mayor a 0
     {
-        printf("   Id       Marca   Tipo     Color   Rodado   \n");
-        printf(" ----------------------------------------------\n");
+        printf("   Id         Marca          Tipo       Color     Rodado   \n");
+        printf(" -----------------------------------------------------\n");
         for(int i=0; i<tam; i++)
         {
             if(bicis[i].isEmpty==0)// Si isEmpty dentro del vector es 0 entonces muestra la funcion mostrar bici
             {
-                mostrarBici(bicis[i]);
+                mostrarBici(bicis[i], tipos, tamTipo, colores, tamCol);
                 flag=1;//Si encuentra datos cargados en la lista el valor de la flag es 1
             }
         }
@@ -196,9 +224,14 @@ int mostrarBicis(eBici bicis[], int tam)
 }
 
 
-void mostrarBici(eBici unaBici)
+void mostrarBici(eBici unaBici, eTipo tipos[], int tamTipo, eColor colores[], int tamCol)
 {
-    printf(" %4d   %12s   %d    %d   %.2f\n", unaBici.id, unaBici.marca, unaBici.idTipo, unaBici.idColor, unaBici.rodado);//Imprime los datos de la bici segun su posicion en el vector
+    char descTipo[25];
+    char descCol[25];
+
+    cargarDescripcionTipo(unaBici.idTipo, tipos, tamTipo, descTipo);
+    cargarDescripcionColor(unaBici.idColor, colores, tamCol, descCol);
+    printf(" %4d   %12s   %12s    %9s   %.2f\n", unaBici.id, unaBici.marca, descTipo, descCol, unaBici.rodado);//Imprime los datos de la bici segun su posicion en el vector
 }
 
 int buscarLibre(eBici bicis[], int tam)
@@ -290,32 +323,7 @@ void mostrarTipo(eTipo unTipo)
 
 }
 
-int mostrarServicios(eServicio array[],int tam)
-{
-    int retorno=-1;
 
-    if(array != NULL && tam > 0)
-    {
-       printf("\n***LISTA DE SERVICIOS***\n");
-        printf("ID    DESCRIPCION    PRECIO\n");
-        printf("---------------------------\n");
-        for(int i=0;i<tam;i++)
-        {
-            mostrarServicio(array[i]);
-        }
-
-    }
-
-
-    return retorno ;
-
-}
-void mostrarServicio(eServicio unServicio)
-{
-
-    printf("%d   %s      %d\n", unServicio.id, unServicio.descripcion, unServicio.precio);
-
-}
 
 int hardcodearBicis(eBici bicis[], int tam, int cant)
 {
@@ -337,4 +345,30 @@ int hardcodearBicis(eBici bicis[], int tam, int cant)
         }
     }
     return retorno;
+}
+
+void cargarDescripcionTipo(int idTipo, eTipo tipos[], int tamTipo, char desc[])
+{
+    for(int i=0;i<tamTipo;i++)
+    {
+        if(tipos[i].id==idTipo)
+        {
+            strcpy(desc, tipos[i].descripcion);
+            break;
+        }
+
+    }
+}
+
+void cargarDescripcionColor(int idColor, eColor colores[], int tamCol, char desc[])
+{
+    for(int i=0;i<tamCol;i++)
+    {
+        if(colores[i].id==idColor)
+        {
+            strcpy(desc, colores[i].nombreColor);
+            break;
+        }
+
+    }
 }

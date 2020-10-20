@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-//#include "dataStore.h"
+
 #include "bicicletas.h"
 #include "trabajos.h"
+#include "validaciones.h"
 // 1ER PARCIAL 2 CUATRIMESTRE
 #define TAM 1000
 #define TAMCOL 5
@@ -22,7 +23,8 @@ int main()
     int proximoId=1000;
     int proximoIdTrabajo=1000;
     char salir = 'n';
-    int flagAlta=1;   //CAMBIAR A CERO!!!!!!!!!!!!!!!
+    int flagAlta=1;
+    int flagTrabajo=1;
     int rta;
 
     eColor colores[TAMCOL] = {
@@ -75,7 +77,7 @@ int main()
         switch(imprimirMenu())
         {
         case 'a':
-            if(!altaBici(listaBicis, TAM, proximoId))
+            if(!altaBici(listaBicis, TAM, proximoId, tipos, TAMTIPO, colores, TAMCOL))
             {
                 printf("\nAlta exitosa\n\n");
                 proximoId++;
@@ -93,7 +95,7 @@ int main()
             }
             else
             {
-                if(!modificarBici(listaBicis, TAM))
+                if(!modificarBici(listaBicis, TAM, tipos, TAMTIPO, colores, TAMCOL))
                 {
                     printf("\nModificacion exitosa\n\n");
                 }
@@ -104,7 +106,7 @@ int main()
             }
             break;
         case 'c':
-            rta=bajaBici(listaBicis, TAM);
+            rta=bajaBici(listaBicis, TAM, tipos, TAMTIPO, colores, TAMCOL);
             if(rta==0)
             {
                 printf("\nBaja exitosa\n\n");
@@ -115,7 +117,7 @@ int main()
             }
             break;
         case 'd':
-            mostrarBicis(listaBicis, TAM);
+            mostrarBicis(listaBicis, TAM, tipos, TAMTIPO, colores, TAMCOL);
             break;
         case 'e':
             mostrarTipos(tipos, TAMTIPO);
@@ -130,10 +132,15 @@ int main()
             printf("\n\n");
             break;
         case 'h':
-            if(!altaTrabajo(listaTrabajos, TAMTRAB, proximoIdTrabajo))
+            if(flagAlta==1 && !altaTrabajo(listaTrabajos, TAMTRAB, proximoIdTrabajo, proximoId))
             {
                 printf("\nAlta exitosa\n\n");
+                flagTrabajo=1;
                 proximoIdTrabajo++;
+            }
+            else if(flagAlta==0)
+            {
+                printf("\nERROR Debe realizar al menos un alta de bici\n\n");
             }
             else
             {
@@ -141,8 +148,15 @@ int main()
             }
             break;
         case 'i':
-            mostrarTrabajos(listaTrabajos, TAMTRAB);
-            printf("\n\n");
+            if(flagTrabajo==0)
+            {
+                printf("\nERROR Debe realizar al menos un alta de trabajo\n\n");
+            }
+            else
+            {
+                mostrarTrabajos(listaTrabajos, TAMTRAB, servicios, TAMSERV);
+                printf("\n\n");
+            }
             break;
         case 'j':
             printf("Confirma salida? ");

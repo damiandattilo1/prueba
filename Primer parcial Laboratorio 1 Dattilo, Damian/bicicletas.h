@@ -26,12 +26,7 @@ typedef struct
 	int isEmpty;
 }eBici;
 
-typedef struct
-{
-	int id;
-	char descripcion[25];
-	int precio;
-}eServicio;
+
 
 
 
@@ -57,7 +52,7 @@ int inicializarBicis(eBici bicis[], int tam);
  *
  */
 
-int altaBici(eBici bicis[], int tam, int id);
+int altaBici(eBici bicis[], int tam, int id, eTipo tipos[], int tamTipo, eColor colorres[], int tamCol);
 
 /** \brief modifica un elemento en un arreglo de bicis
  *
@@ -67,7 +62,7 @@ int altaBici(eBici bicis[], int tam, int id);
  *
  */
 
-int modificarBici(eBici bicis[], int tam);
+int modificarBici(eBici bicis[], int tam, eTipo tipos[], int tamTipo, eColor colores[], int tamCol);
 
 /** \brief da de baja un elemento en un arreglo de bicis
  *
@@ -77,7 +72,7 @@ int modificarBici(eBici bicis[], int tam);
  *
  */
 
-int bajaBici(eBici bicis[], int tam);
+int bajaBici(eBici bicis[], int tam, eTipo tipos[], int tamTipo, eColor colores[], int tamCol);
 
 /** \brief imprime un arreglo de bicis
  *
@@ -87,7 +82,7 @@ int bajaBici(eBici bicis[], int tam);
  *
  */
 
-int mostrarBicis(eBici bicis[], int tam);
+int mostrarBicis(eBici bicis[], int tam, eTipo tipos[], int tamTipo, eColor colores[], int tamCol);
 
 /** \brief imprime un elemento en un arreglo de bicis
  *
@@ -95,7 +90,7 @@ int mostrarBicis(eBici bicis[], int tam);
  *
  */
 
-void mostrarBici(eBici unaBici);
+void mostrarBici(eBici unaBici, eTipo tipos[], int tamTipo, eColor colores[], int tamCol);
 
 /** \brief busca un elemento libre en un arreglo de bicis
  *
@@ -154,23 +149,7 @@ int mostrarTipos(eTipo array[],int tam);
 
 void mostrarTipo(eTipo unTipo);
 
-/** \brief imprime un arreglo de servicios
- *
- * \param arreglo
- * \param tamaño del arreglo
- * \return -1 si error, o si OK
- *
- */
 
-int mostrarServicios(eServicio array[],int tam);
-
-/** \brief imprime un elemento de un arreglo de servicios
- *
- * \param elemento
- *
- */
-
-void mostrarServicio(eServicio unServicio);
 
 /** \brief hardcodea un arreglo de bicis
  *
@@ -181,3 +160,8 @@ void mostrarServicio(eServicio unServicio);
  */
 
 int hardcodearBicis(eBici bicis[], int tam, int cant);
+
+
+void cargarDescripcionTipo(int idTipo, eTipo tipos[], int tamTipo, char desc[]);
+
+void cargarDescripcionColor(int idColor, eColor colores[], int tamCol, char desc[]);
