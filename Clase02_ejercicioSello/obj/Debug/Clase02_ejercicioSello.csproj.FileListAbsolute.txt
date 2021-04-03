@@ -1,0 +1,7 @@
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\obj\Debug\Clase02_ejercicioSello.csproj.CoreCompileInputs.cache
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\bin\Debug\Clase02_ejercicioSello.exe.config
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\bin\Debug\Clase02_ejercicioSello.exe
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\bin\Debug\Clase02_ejercicioSello.pdb
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\obj\Debug\Clase02_ejercicioSello.exe
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\obj\Debug\Clase02_ejercicioSello.pdb
+C:\Users\usu\source\repos\Dattilo.Damian\Clase02_ejercicioSello\obj\Debug\Clase02_ejercicioSello.csprojAssemblyReference.cache
