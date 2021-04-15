@@ -11,27 +11,15 @@ namespace Entidades
         static void Main(string[] args)
         {
             Numero n1 = new Numero(5);
-            Numero n2 = new Numero("2,54");
+            Numero n2 = new Numero(2);
 
-            double numeroDouble = 40;
-            string numeroString = "77";
+            string operador = Char.ToString('+');
 
-            //string binarioString = "a";
+            double resultado;
 
-            Console.WriteLine("{0}", Numero.DecimalBinario(numeroDouble));
-            Console.WriteLine("{0}\n", Numero.BinarioDecimal(Numero.DecimalBinario(numeroDouble)));
+            resultado = Calculadora.Operar(n1, n2, operador);
 
-            Console.WriteLine("{0}", Numero.DecimalBinario(numeroString));
-            Console.WriteLine("{0}\n", Numero.BinarioDecimal(Numero.DecimalBinario(numeroString)));
-          
-            /*if(Numero.esBinario(binarioString))
-            {
-                Console.WriteLine("SI binario");
-            }
-            else
-            {
-                Console.WriteLine("NO binario");
-            }*/
+            Console.WriteLine("El resultado es: {0}", resultado);
 
             Console.ReadKey();
         }

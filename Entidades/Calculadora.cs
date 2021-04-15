@@ -6,49 +6,52 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Calculadora
-    {/*
-        public static double Operar (double num1, double num2, string operador)
+    static class Calculadora
+    {
+        public static double Operar (Numero num1, Numero num2, string operador)
         {
-            operador = Calculadora.ValidarOperador((char)operador);
-            if(operador == '+')
+            int operadorInt;
+            string operadorString;
+            char operadorChar;
+
+            operadorString = Calculadora.ValidarOperador(Convert.ToChar(operador));
+            operadorChar = Convert.ToChar(operadorString);
+            operadorInt = operadorChar;
+
+            if(operadorInt == 43)
             {
                 return num1 + num2;
             }
-            else if(operador == '-')
+            else if(operadorInt == 45)
             {
                 return num1 - num2;
             }
-            else if(operador == '/')
+            else if(operadorInt == 47)
             {
                 return num1 / num2;
             }
-            else if (operador == '*')
+            else if (operadorInt == 42)
             {
                 return num1 * num2;
             }
+            else
+            {
+                return 5;
+            }
 
         }
+        
         private static string ValidarOperador(char operador)
         {
             if (operador == '+' || operador == '-' || operador == '/' || operador == '*')
             {
-                return operador;
+                return Char.ToString(operador);
             }
             else
             {
-                return '+';
+                return Char.ToString('+');
             }
         }
-        public static implicit operator char (string s)
-        {
-            return s;
-        }
-
-        public static explicit operator string (char c)
-        {
-            return c;
-        }
-       */
+       
     }
 }
