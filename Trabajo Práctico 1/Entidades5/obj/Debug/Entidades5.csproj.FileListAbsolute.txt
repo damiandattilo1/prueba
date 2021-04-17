@@ -1,0 +1,5 @@
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades5\bin\Debug\Entidades5.dll
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades5\bin\Debug\Entidades5.pdb
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades5\obj\Debug\Entidades5.csproj.CoreCompileInputs.cache
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades5\obj\Debug\Entidades5.dll
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades5\obj\Debug\Entidades5.pdb

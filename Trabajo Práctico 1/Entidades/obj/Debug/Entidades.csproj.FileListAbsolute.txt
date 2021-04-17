@@ -1,0 +1,14 @@
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\bin\Debug\Entidades.exe.config
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\bin\Debug\Entidades.exe
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\obj\Debug\Entidades.exe
+C:\Users\usu\source\repos\Trabajos Prácticos\Entidades\obj\Debug\Entidades.pdb
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\bin\Debug\Entidades.exe.config
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\bin\Debug\Entidades.exe
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\bin\Debug\Entidades.pdb
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\obj\Debug\Entidades.exe
+C:\Users\usu\source\repos\Trabajo Práctico 1\Entidades\obj\Debug\Entidades.pdb
