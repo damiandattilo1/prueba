@@ -10,20 +10,10 @@ namespace Entidades
     {
         static void Main(string[] args)
         {
-            Numero n1 = new Numero("7,89");
-            Numero n2 = new Numero("2,89");
+            string binario = "10000";
+            string numero = "5";
 
-            // string operador = Char.ToString('/');
-            string operador = ("-");
-
-            double resultado;
-
-            resultado = Calculadora.Operar(n1, n2, operador);
-
-            Console.WriteLine("El resultado es: {0}", resultado);
-            //resultado = Numero.ValidarNumero("/");
-
-            //Console.WriteLine("La conversion es: {0}", resultado);
+            Console.WriteLine("{0}", Numero.BinarioDecimal(numero));
 
 
             Console.ReadKey();

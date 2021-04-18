@@ -18,7 +18,7 @@ namespace MiCalculadora
             InitializeComponent();
             this.Text = "Calculadora de Dattilo, Damian del curso 2A";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.comboBox1.Items.AddRange(new String[] {"+", "-", "*", "/"});
+            this.cmbOperador.Items.AddRange(new String[] {"+", "-", "*", "/"});
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -30,14 +30,32 @@ namespace MiCalculadora
         {
             double resultado;
 
-            Numero n1 = new Numero(this.textBox1.Text);
-            Numero n2 = new Numero(this.textBox2.Text);
+            Numero n1 = new Numero(this.txtNumero1.Text);
+            Numero n2 = new Numero(this.txtNumero2.Text);
 
-            resultado = Calculadora.Operar (n1, n2, comboBox1.Text);
+            resultado = Calculadora.Operar (n1, n2, cmbOperador.Text);
 
-            MessageBox.Show(Convert.ToString(resultado));
-            this.label1.Text = (Convert.ToString(resultado));
+            this.lblResultado.Text = (Convert.ToString(resultado));
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        {
+            
+             this.lblResultado.Text = Numero.DecimalBinario(this.lblResultado.Text);
+          
+        }
+
+        private void btnConvertirADecimal_Click(object sender, EventArgs e)
+        {
+            
+            this.lblResultado.Text = Convert.ToString(Numero.BinarioDecimal(this.lblResultado.Text));
+            
         }
 
     }

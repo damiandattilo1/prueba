@@ -31,21 +31,27 @@ namespace Entidades5
             this.SetNumero = strNumero;
         }
 
-        public static int BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
             int j = 1;
             int resultado = 0;
-            for (int i = binario.Length - 1; i >= 0; i--)
+            if (!Numero.esBinario(binario))
             {
-                //Console.WriteLine("{0}", j);
-                if ((binario[i]) == '1')
-                {
-                    resultado = resultado + j;
-                }
-                j = j * 2;
+                return binario;
             }
-            //Console.WriteLine("{0}", j);
-            return resultado;
+            else
+            {
+                for (int i = binario.Length - 1; i >= 0; i--)
+                {
+                    if ((binario[i]) == '1')
+                    {
+                        resultado = resultado + j;
+                    }
+                    j = j * 2;
+                }
+
+                return Convert.ToString(resultado);
+            }
         }
 
         public static string DecimalBinario(double numero)
@@ -98,8 +104,15 @@ namespace Entidades5
 
         public static string DecimalBinario(string numero)
         {
-            double numeroDouble = Convert.ToDouble(numero);
-            return Numero.DecimalBinario(numeroDouble);
+            if (Numero.esBinario(numero))
+            {
+                return numero;
+            }
+            else
+            {
+                double numeroDouble = Convert.ToDouble(numero);
+                return Numero.DecimalBinario(numeroDouble);
+            }
         }
 
         private static bool esBinario(string binario)
