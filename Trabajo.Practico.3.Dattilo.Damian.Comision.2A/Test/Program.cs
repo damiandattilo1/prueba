@@ -21,7 +21,7 @@ namespace Test
             AireAcondicionado ac5 = new AireAcondicionado(5778, EMarca.LG, EficienciaEnergetica.D, 10, ETipo.Frio, 72482);
             AireAcondicionado ac6 = new AireAcondicionado(6978, EMarca.Whirlpool, EficienciaEnergetica.D, 72, ETipo.Deshumidificador, 14233);
             AireAcondicionado ac7 = new AireAcondicionado(7111, EMarca.Sony, EficienciaEnergetica.C, 55, ETipo.FrioCalor, 18523);
-            // PRUEBA COMMIT
+
 
             Microondas m1 = new Microondas(1234, EMarca.Philco, EficienciaEnergetica.A, 38, ETamanio.Chico, 98555);
             Microondas m2 = new Microondas(2555, EMarca.LG, EficienciaEnergetica.D, 12, ETamanio.Mediano , 75482);

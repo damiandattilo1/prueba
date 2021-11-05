@@ -17,17 +17,18 @@ namespace Formulario
         {
             
             InitializeComponent();
+
+            Calidad<AireAcondicionado> aires = new Calidad<AireAcondicionado>(4);
             
             this.Text = "TP 3 de Dattilo, Damian del curso 2A";
             this.StartPosition = FormStartPosition.CenterScreen;
             
             this.elegirClase.Items.AddRange(new String[] { "Microondas", "Aire Acondicionado" });
             
-            this.eficiencia1.Items.AddRange(new String[] { "A", "B", "C", "D" });
-            this.eficiencia2.Items.AddRange(new String[] { "A", "B", "C", "D" });
+            this.eficiencia.Items.AddRange(new String[] { "A", "B", "C", "D" });
             
-            this.caracteristica1.Items.AddRange(new String[] { "Frio", "Calor", "FrioCalor", "Chico", "Mediano", "Grande"});
-            this.caracteristica2.Items.AddRange(new String[] { "Frio", "Calor", "FrioCalor", "Chico", "Mediano", "Grande"});
+            this.marca.Items.AddRange(new String[] { "LG", "Whirlpool", "Philco", "Samsung", "Sony" });
+            this.caracteristica.Items.AddRange(new String[] { "Frio", "Calor", "FrioCalor", "Deshumidificador"});
         }
 
         private void id1_TextChanged(object sender, EventArgs e)
@@ -53,10 +54,16 @@ namespace Formulario
 
             bool auxClase;*/
 
-            if (String.IsNullOrWhiteSpace(elegirClase.Text) || String.IsNullOrWhiteSpace(id1.Text) || string.IsNullOrWhiteSpace(id2.Text) || String.IsNullOrWhiteSpace(eficiencia1.Text) || String.IsNullOrWhiteSpace(eficiencia2.Text) || String.IsNullOrWhiteSpace(caracteristica1.Text) || String.IsNullOrWhiteSpace(caracteristica2.Text))
+            if (String.IsNullOrWhiteSpace(elegirClase.Text) || String.IsNullOrWhiteSpace(id.Text) || string.IsNullOrWhiteSpace(precio.Text) || string.IsNullOrWhiteSpace(porcentajeFallas.Text) || String.IsNullOrWhiteSpace(eficiencia.Text) || String.IsNullOrWhiteSpace(marca.Text) || String.IsNullOrWhiteSpace(caracteristica.Text))
             {
                 MessageBox.Show("ERROR: Ingrese valores");
             }
+            else
+            {
+                AireAcondicionado aire = new AireAcondicionado(int.Parse(id.Text), marca.Text.ToString(), eficiencia.Text, int.Parse(porcentajeFallas.Text), caracteristica.Text, int.Parse(precio.Text));
+                aires.Agregar(aire);
+            }
+            
            /* else
             {
                 if(eficiencia1 == "A")
@@ -147,6 +154,11 @@ namespace Formulario
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void caracteristica_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
