@@ -1,0 +1,9 @@
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\bin\Debug\netcoreapp3.1\Entidades.deps.json
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\obj\Debug\netcoreapp3.1\Entidades.csprojAssemblyReference.cache
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfoInputs.cache
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\obj\Debug\netcoreapp3.1\Entidades.AssemblyInfo.cs
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\obj\Debug\netcoreapp3.1\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\obj\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\Entidades\obj\Debug\netcoreapp3.1\Entidades.pdb
