@@ -37,7 +37,6 @@ namespace IngresoProductos
             this.cmbCaracteristica = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cmbProducto = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnVerLista = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -104,7 +103,7 @@ namespace IngresoProductos
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(243, 326);
+            this.btnAgregar.Location = new System.Drawing.Point(265, 326);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(272, 81);
             this.btnAgregar.TabIndex = 7;
@@ -122,20 +121,11 @@ namespace IngresoProductos
             this.cmbProducto.TabIndex = 8;
             this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(893, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 80);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnVerLista
             // 
-            this.btnVerLista.Location = new System.Drawing.Point(593, 326);
+            this.btnVerLista.Location = new System.Drawing.Point(809, 326);
             this.btnVerLista.Name = "btnVerLista";
-            this.btnVerLista.Size = new System.Drawing.Size(175, 81);
+            this.btnVerLista.Size = new System.Drawing.Size(245, 81);
             this.btnVerLista.TabIndex = 10;
             this.btnVerLista.Text = "Ver lista de Productos";
             this.btnVerLista.UseVisualStyleBackColor = true;
@@ -224,7 +214,6 @@ namespace IngresoProductos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVerLista);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbProducto);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cmbCaracteristica);
@@ -251,7 +240,6 @@ namespace IngresoProductos
         private System.Windows.Forms.ComboBox cmbCaracteristica;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox cmbProducto;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVerLista;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

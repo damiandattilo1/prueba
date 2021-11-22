@@ -17,3 +17,9 @@ C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoP
 C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\Entidades.pdb
 C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\obj\Debug\netcoreapp3.1\IngresoProductos.csproj.CopyComplete
 C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\obj\Debug\netcoreapp3.1\IngresoProductos.FrmIngresoProductos.resources
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\usu\source\repos\Trabajo.Practico.4.Dattilo.Damian.Comision.2A\IngresoProductos\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

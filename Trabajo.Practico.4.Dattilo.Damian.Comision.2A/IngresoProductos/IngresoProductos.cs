@@ -14,10 +14,9 @@ namespace IngresoProductos
 {
     public partial class FrmIngresoProductos : Form
     {
-        //public Taller<Microondas> listaMicros;
-        //public Taller<AireAcondicionado> listaAires;
         
         public Taller<Producto> listaProductos;
+        public int capacidadMaxima;
         public FrmIngresoProductos()
         {
             InitializeComponent();
@@ -30,9 +29,8 @@ namespace IngresoProductos
 
             cmbProducto.Text = ("Ingrese un producto");
 
-           // listaMicros = new Taller<Microondas>(5);
-            //listaAires = new Taller<AireAcondicionado>(5);
-            listaProductos = new Taller<Producto>(5);
+            capacidadMaxima = 7;
+            listaProductos = new Taller<Producto>(capacidadMaxima);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -45,18 +43,39 @@ namespace IngresoProductos
                  ETipo t = (ETipo)Enum.Parse(typeof(ETipo), cmbCaracteristica.Text);
 
                  AireAcondicionado ac = new AireAcondicionado(Int32.Parse(txtId.Text), m, eE, Int32.Parse(txtPorcentaje.Text), t, Int32.Parse(txtPrecio.Text));
-                 listaProductos.Agregar(ac);
+                 if(!listaProductos.Agregar(ac))// && listaProductos.lista.Count == capacidadMaxima)
+                 {
+                    if(listaProductos.lista.Count == capacidadMaxima)
+                    {
+                        MessageBox.Show("Taller completo!!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El producto ya se encuentra en la lista!!!");
+                    }
+                 }
 
              }
-             if (cmbProducto.Text == "Aire Microondas")
+             if (cmbProducto.Text == "Microondas")
              {
                  EMarca m = (EMarca)Enum.Parse(typeof(EMarca), cmbMarca.Text);
                  EficienciaEnergetica eE = (EficienciaEnergetica)Enum.Parse(typeof(EficienciaEnergetica), cmbEficiencia.Text);
                  ETamanio t = (ETamanio)Enum.Parse(typeof(ETamanio), cmbCaracteristica.Text);
 
                  Microondas mi = new Microondas(Int32.Parse(txtId.Text), m, eE, Int32.Parse(txtPorcentaje.Text), t, Int32.Parse(txtPrecio.Text));
-                 listaProductos.Agregar(mi);
-             }
+                
+                 if (!listaProductos.Agregar(mi))
+                 {
+                    if (listaProductos.lista.Count == capacidadMaxima)
+                    {
+                        MessageBox.Show("Taller completo!!!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El producto ya se encuentra en la lista!!!");
+                    }
+                 }
+            }
 
             
         }
